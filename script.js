@@ -23,15 +23,15 @@ function setup() {
                 grassEaterArr.push(gre)
             }
             else if (matrix[y][x] == 3) {
-                var pred = new predator(x, y, 3)
+                var pred = new Predator(x, y, 3)
                 predatorArr.push(pred)
             }
             else if (matrix[y][x] == 4) {
-                var dinos = new dinosaur(x, y, 4)
+                var dinos = new Dinosaur(x, y, 4)
                 dinosaurArr.push(dinos)
             }
             else if (matrix[y][x] == 5) {
-                var mons = new monster(x, y, 5)
+                var mons = new Monster(x, y, 5)
                 monsterArr.push(mons)
             }
         }
