@@ -1,5 +1,7 @@
 // dinosaur-ը ուտում է predator-ին
-class Dinosaur extends LivingCreature {
+var LivingCreature = require('./livingCreature')
+let random = require("./random");
+module.exports = class Dinosaur extends LivingCreature {
     constructor(x, y, index) {
         super(x,y,index)
         this.energy = 8;

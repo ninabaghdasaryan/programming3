@@ -1,4 +1,5 @@
-import { fstat } from "fs";
+let random = require('./random')
+// import { fstat } from "fs";
 
 // var fs = require('fs');
 
@@ -35,13 +36,13 @@ import { fstat } from "fs";
 
 // main();
 
-let obj = {
-    name: "Valod"
-    age: 55
-}
-function main() {
-    fs.writeFileSync("obj.json", JSON.stringify(obj));
-    var text = JSON.parse(fs.readFileSync("obj.json"))
-    console.log(text)
-    }
-    main();
+// let obj = {
+//     name: "Valod"
+//     age: 55
+// }
+// function main() {
+//     fs.writeFileSync("obj.json", JSON.stringify(obj));
+//     var text = JSON.parse(fs.readFileSync("obj.json"))
+//     console.log(text)
+//     }
+//     main();
