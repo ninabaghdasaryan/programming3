@@ -27,6 +27,7 @@ grassEaterArr = []
 predatorArr = []
 dinosaurArr = []
 monsterArr = []
+alleaterArr = []
 
 
 var Grass = require('./grass')
@@ -34,6 +35,7 @@ var Dinosaur = require('./dinosaur')
 var GrassEater = require('./grasseater')
 var Monster = require('./monster')
 var Predator = require('./predator')
+var AllEater = require('./AllEater')
 
 function createMatrix() {
 
@@ -57,8 +59,10 @@ function createMatrix() {
     character(2, 150);
     character(3, 1);
     character(4, 2);
-
+    character(5, 20)
+    character(6, 20)
   
+
         for (var y = 0; y < matrix.length; ++y) {
             for (var x = 0; x < matrix[y].length; ++x) {
                 if (matrix[y][x] == 1) {
@@ -81,6 +85,10 @@ function createMatrix() {
                     var mons = new Monster(x, y, 5)
                     monsterArr.push(mons)
                 }
+                else if (matrix[y][x] == 6) {
+                    var mons = new AllEater(x, y, 6)
+                    alleaterArr.push(mons)
+                }
             }
         }
     }
@@ -102,6 +110,9 @@ function createMatrix() {
         }
         for (var i in monsterArr) {
             monsterArr[i].eat();
+        }
+        for (var i in alleaterArr) {
+            alleaterArr[i].eat();
         }
 
 
